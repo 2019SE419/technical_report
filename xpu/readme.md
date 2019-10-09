@@ -267,29 +267,99 @@ FPGA(Field Programmable Gate Array)
 
 ## N
 
-Neural-Network Processing Unit
+1. **Neural-Network Processing Unit**:
 
-Neural/Neuromorphic Processing Unit
+	![NPU](https://pic3.zhimg.com/80/v2-175a866d0a37fdf3a81a378921b8dc1e_hd.jpg)
 
-Network Processing Unit
+	Due to the difference between the types and calculations of neural network calculations 
+	and traditional calculations, traditional CPUs, DSPs, and even GPUs have deficiencies in computing power, 
+	performance, and energy efficiency when performing NN calculations the requirements of the NPU is activated.
+
+	- [Vimicro](http://www.vimicro.com.cn/)
+
+	- [Kneron](http://www.kneron.com/)
+
+	- [Verisilicon](http://www.verisilicon.com)
+
+	- [nationalchip](http://www.nationalchip.com)
+
+2. **Neural/Neuromorphic Processing Unit**:
+
+	<div align="center">
+	<img src="https://www.researchgate.net/profile/Christian_Mayr/publication/242606023/figure/fig7/AS:668849355644929@1536477521159/block-diagram-of-the-Neural-Processing-Unit-with-neural-microcircuit-digital-neuron-and.ppm" width="80%" />
+	</div>
+	<br>
+
+	A neural processing unit (NPU) is a well-partitioned circuit that comprises of all the control
+	and arithmetic logic components necessary to execute machine learning algorithms.
+	NPUs are designed to accelerate the performance of common machine learning tasks such as image classification,
+	machine translation, object detection, and various other predictive models.
+	NPUs may be part of a large SoC, a plurality of NPUs may be instantiated on a single chip,
+	or they may be part of a dedicated neural-network accelerator.
+
+	- Zeroth from Qualcomm
+
+	- TrueNorth from IBM
+
+	- Loihi from Intel
+
+	- SNAP from BrainChip
+
+	- CM1K, NM500, NeuroMem IP from GeneralVision
+
+	- Knowm
+
+	- Koniku
+
+	- westwell
+
+3. **Network Processing Unit**:
+	
+	![network-processing](https://barrgroup.com/images/articles/NetworkProcessors_CPortC5_figure4.gif)
+
+	A network processor is an integrated circuit which has a feature set specifically targeted at the networking application domain.
+	Network processors are typically software programmable devices and would have generic characteristics similar to general purpose central processing units that are commonly used in many different types of equipment and products.
 
 ## O
 
-Optical-Flow Processing Unit
+1. **Optical-Flow Processing Unit**:
+	
+	![opu](https://upload.wikimedia.org/wikipedia/commons/5/55/Opticfloweg.png)
+
+	Optical flow or optic flow is the pattern of apparent motion of objects, surfaces, and edges in a visual scene caused by the relative motion between an observer and a scene.
+	Optical flow can also be defined as the distribution of apparent velocities of movement of brightness pattern in an image.
+	OPU can be needed in acceleration with ASIC IP.
 
 ## P
 
-Physical Processing Unit
+1. **Physical Processing Unit**:
+
+	![physX](https://developer.nvidia.com/sites/default/files/akamai/gamedev/images/particles.jpg)
+
+	A physics processing unit (PPU) is a dedicated microprocessor designed to handle the calculations of physics, especially in the physics engine of video games. It is an example of hardware acceleration.
+	Examples of calculations involving a PPU might include rigid body dynamics, soft body dynamics, collision detection, fluid dynamics, hair and clothing simulation, finite element analysis, and fracturing of objects.
+	The idea is that specialized processors offload time consuming tasks from a computer's CPU, much like how a GPU performs graphics operations in the main CPU's place. The term was coined by [Ageia](http://www.ageia.com/) to describe its PhysX chip. Several other technologies in the CPU-GPU spectrum have some features in common with it, although Ageia's product was the only complete one designed, marketed, supported, and placed within a system exclusively as a PPU.
 
 ## Q
 
-Quantum Processing Unit
+1. **Quantum Processing Unit**:
+
+	![qpu](https://www.researchgate.net/profile/Farid_Ablayev/publication/311736939/figure/fig1/AS:441207244496896@1482203412188/A-model-of-a-Quantum-Processing-Unit-QPU-A-Quantum-Processing-Unit-QPU-is-a-device.png)
+
+	Quantum computing is the study of a still-hypothetical model of computation. Whereas traditional models of computing such as the Turing machine or Lambda calculus rely on "classical" representations of computational memory, a quantum computation could transform the memory into a quantum superposition of possible classical states. A quantum computer is a device that could perform such computation.
+	A quantum processing unit (QPU), also referred to as a quantum chip, is a physical (fabricated) chip that contains a number of interconnected qubits. It is the foundational component of a full quantum computer, which includes the housing environment for the QPU, the control electronics, and many other components.
 
 ## R
 
-Resistive Processing Unit
+1. **Resistive Processing Unit**:
 
-Ray-tracing Processing Unit
+	![rpu](./rpu.png)
+
+	This is the concept put forward by researchers at the IBM Watson Research Center. It is really a processing unit, not a processor. RPU can implement both storage and calculation. With RPU arrays, IBM researchers can achieve 80TOPS/s/W performance.
+
+2. **Ray-tracing Processing Unit**:
+
+	Ray tracing is a rendering algorithm in computer graphics. RPU is an accelerator developed to accelerate the calculation of data in it. Now these calculations are all GPU things.
 
 ## S
 
@@ -331,11 +401,13 @@ X means everything
 
 ## Z
 
-**Zylin CPU**: 
-CPU of Zylin, a Norwegian company. 
-[Reference Github page zylin/zpu](https://github.com/zylin/zpu).
-> The worlds smallest 32 bit CPU with GCC toolchain,
-> which means 'Taking up very little resources and the architecture itself is small.'
+1. **Zylin CPU**: 
+	
+	CPU of Zylin, a Norwegian company. 
+	[Reference Github page zylin/zpu](https://github.com/zylin/zpu).
+
+	> The worlds smallest 32 bit CPU with GCC toolchain,
+	> which means 'Taking up very little resources and the architecture itself is small.'
 
 ## Reference
 
@@ -346,3 +418,8 @@ CPU of Zylin, a Norwegian company.
 5. [Processing in Memory: The Terasys Massively Parallel PlM Array](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=375174)
 6. [Wikichip](https://en.wikichip.org)
 7. [Memory Protection Unit (MPU)](https://static.docs.arm.com/100699/0100/armv8m_architecture_memory_protection_unit_100699_0100_00_en.pdf)
+8. [How Network Processors Work](https://barrgroup.com/Embedded-Systems/How-To/Network-Processors)
+9. [NVIIDA PhysX](https://www.geforce.com/hardware/technology/physx)
+10. [The Quantum Processing Unit (QPU)](http://docs.rigetti.com/en/1.9/qpu.html)
+11. [Analog CMOS-based Resistive Processing Unit for Deep Neural Network Training](https://arxiv.org/pdf/1706.06620.pdf)
+12. [Resistive Computing: Based on the Human Brain](http://web.mit.edu/writing/gradexam/2016/readings/Resistive_Computing_PC_Magazine.pdf)
