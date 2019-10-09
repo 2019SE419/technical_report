@@ -3,7 +3,8 @@ xPU(xxx Processing Unit): functional processing unit for certain usage
 
 ## Introduction
 
-FPGA(Field Programmable Gate Array)
+With the development of AI chips, variant xPUs comes out with such a name to be impressive to people.
+xPU is a certain processor for certain usage in fact.
 
 ## A 
 
@@ -363,37 +364,48 @@ FPGA(Field Programmable Gate Array)
 
 ## S
 
-Streaming Processing Unit
+1. **Streaming Processing Unit**:
+	
+	Stream processing is a computer programming paradigm, equivalent to dataflow programming, event stream processing, and reactive programming,
+	that allows some applications to more easily exploit a limited form of parallel processing. Such applications can use multiple computational units, such as the floating point unit on a graphics processing unit or field-programmable gate arrays (FPGAs),
+	without explicitly managing allocation, synchronization, or communication among those units.
+	The SPU first appeared in the structure of the graphics chip. It can be said that the GPU is a stream processor. Even, there was a company named "Streaming Processor Inc", which was founded in 2004. In 2009, SPI was closed as the founder and chairman was dug up to NVIDIA as the chief scientist.
 
-Speech-Recongnition Processing Unit
+2. **Speech-Recongnition Processing Unit**:
 
-Smart Processing Unit
-
-Space Processing Unit
+	Speech recognition is a interdisciplinary subfield of computational linguistics that develops methodologies and technologies that enables the recognition and translation of spoken language into text by computers. It is also known as automatic speech recognition (ASR), computer speech recognition or speech to text (STT). It incorporates knowledge and research in the linguistics, computer science, and electrical engineering fields.
 
 ## T
 
-Tensor Processing Unit
+1. **Tensor Processing Unit**:
 
-## U
+	![tpu](http://mmbiz.qpic.cn/mmbiz_png/6VURbzBFQj4pYcVrBja4QKPcAb1m8uxNqwuMECnx8wdCib1XMRHTIoAYaphyI3pzhbWSWqR2juLEUGHCvputsOw/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
 
-Universe Processing Unit
+	Many architects believe that major improvements in cost-energy-performance must now come from domain-specific hardware. This paper evaluates a custom ASIC—called a Tensor Processing Unit (TPU)—deployed in datacenters since 2015 that accelerates the inference phase of neural networks (NN). The heart of the TPU is a 65,536 8-bit MAC matrix multiply unit that offers a peak throughput of 92 TeraOps/second (TOPS) and a large (28 MiB) software-managed on-chip memory. The TPU’s deterministic execution model is a better match to the 99th-percentile response-time requirement of our NN applications than are the time-varying optimizations of CPUs and GPUs (caches, out-of-order execution, multithreading, multiprocessing, prefetching, …) that help average throughput more than guaranteed latency. The lack of such features helps explain why, despite having myriad MACs and a big memory, the TPU is relatively small and low power. We compare the TPU to a server-class Intel Haswell CPU and an Nvidia K80 GPU, which are contemporaries deployed in the same datacenters. Our workload, written in the high-level TensorFlow framework, uses production NN applications (MLPs, CNNs, and LSTMs) that represent 95% of our datacenters’ NN inference demand. Despite low utilization for some applications, the TPU is on average about 15X - 30X faster than its contemporary GPU or CPU, with TOPS/Watt about 30X - 80X higher. Moreover, using the GPU’s GDDR5 memory in the TPU would triple achieved TOPS and raise TOPS/Watt to nearly 70X the GPU and 200X the CPU. 
 
 ## V
 
-Vision Processing Unit
 
-Visual Processing Unit
+1. **Vision Processing Unit**:
 
-Video Processing Unit
+	![vpu](https://cdn-www.mediatek.com/posts/vpu.jpg)
 
-Vector Processing Unit
+	A vision processing unit (VPU) is a type of microprocessor aimed at accelerating machine learning and artificial intelligence technologies. It is a specialized processor that is made to support tasks like image processing, one of several specialized chips such as the GPU that are generally useful in machine learning.
+	The vision processing unit is in some ways similar to a video processing unit which is used with convolutional neural networks. Where a video processing unit is a specific type of graphics processing, the vision processing unit is described as more suitable for running different types of machine vision algorithms – these tools may be built with specific resources for getting visual data from cameras – they are built for parallel processing. Like video processing units, they are particularly geared toward image processing. Some of these tools are described as “low power and high performance” and may be plugged into interfaces that allow for programmable use. Other aspects of the build can vary due to manufacturer and design choices.
+
+2. **Vector Processing Unit**:
+
+	![vectorpu](https://www.researchgate.net/profile/Petr_Honzik3/publication/239763131/figure/fig2/AS:341579052142593@1458450200317/A-functional-model-of-the-Vector-Processing-Unit-VPU-Data-stored-in-the-local-memory.png)
+
+	In computing, a vector processor or array processor is a central processing unit (CPU) that implements an instruction set containing instructions that operate on one-dimensional arrays of data called vectors, compared to the scalar processors, whose instructions operate on single data items. Vector processors can greatly improve performance on certain workloads, notably numerical simulation and similar tasks. Vector machines appeared in the early 1970s and dominated supercomputer design through the 1970s into the 1990s, notably the various Cray platforms. The rapid fall in the price-to-performance ratio of conventional microprocessor designs led to the vector supercomputer's demise in the later 1990s.
 
 ## W
 
-Wearable Processing Unit
+1. **Wearable Processing Unit**:
 
-Wisdom Processing Unit
+	![wpu](https://pic4.zhimg.com/80/v2-0c14ec2cf24e77555649d818dbc0dffb_hd.jpg)
+
+	In 2014, an Indian company, Ineda Systems, advertised their WPU concept for the IOT market and received funding from Qualcomm and Samsung. The "Dhanush WPU" developed by Ineda Systems is divided into four levels to accommodate the computing needs of wearable devices from the average to the high-end, allowing the wearable device's battery to last up to 30 days of continuous battery life. Consumption. However, everything seems to have come to an abrupt end in 2015 and there is no news. Only at the bottom of the homepage has text display, Ineda applied for a registered trademark by WPU. The information about the WPU is only approximate, oh, yes, there is a US patent.
 
 ## X
 
@@ -405,9 +417,8 @@ X means everything
 	
 	CPU of Zylin, a Norwegian company. 
 	[Reference Github page zylin/zpu](https://github.com/zylin/zpu).
-
-	> The worlds smallest 32 bit CPU with GCC toolchain,
-	> which means 'Taking up very little resources and the architecture itself is small.'
+	The worlds smallest 32 bit CPU with GCC toolchain,
+	which means 'Taking up very little resources and the architecture itself is small.'
 
 ## Reference
 
@@ -423,3 +434,6 @@ X means everything
 10. [The Quantum Processing Unit (QPU)](http://docs.rigetti.com/en/1.9/qpu.html)
 11. [Analog CMOS-based Resistive Processing Unit for Deep Neural Network Training](https://arxiv.org/pdf/1706.06620.pdf)
 12. [Resistive Computing: Based on the Human Brain](http://web.mit.edu/writing/gradexam/2016/readings/Resistive_Computing_PC_Magazine.pdf)
+13. [Google TPU 揭密](https://mp.weixin.qq.com/s/Kf_L4u7JRxJ8kF3Pi8M5iw)
+14. [In-Datacenter Performance Analysis of a Tensor Processing Unit](https://arxiv.org/pdf/1704.04760.pdf)
+15. [Vision Processing Unit (VPU)](https://www.techopedia.com/definition/32870/vision-processing-unit-vpu)
