@@ -170,31 +170,100 @@ FPGA(Field Programmable Gate Array)
 
 	- Apple
 
-Graph Streaming Processor
+2. **Graph Streaming Processor**:
+
+	![thinci](./thinci.png)
+
+	Proposed by [ThinCI(think-eye)](https://www.thinci.com/).
+	Aimed for the application on auto-driving.
+	Using a variety of structural techniques to achieve paralleling at the level of
+	task, thread, data and instruction.
+	With craft of TSMC 28nm HPC+, power consumption about 2.5W.
 
 ## H
 
-Holographic Processing Unit
+1. **Holographic Processing Unit**:
+
+	![hpu](./hpu.jpg)
+
+	Developed by **Microsoft** for its own applications of Hololens.
+	The first generation uses the craft of 29nm HPC and customized extension with 24 Tensilica DSP.
+	The HPU supports 5-way cameras, a 1-way depth sensor (Depth sensor) and a 1-way motion sensor (Motion Sensor).
 
 ## I
 
-Intelligence Processing Unit
+1. **Intelligence Processing Unit**:
+	
+	There are two companies declaring the name IPU:
 
-Image Processing Unit
+	- [Graphcore](https://www.graphcore.ai/)
+
+	![graphcore](./graphcore.jpg)
+
+	The IPU from Graphcore is aimed for graph computing.
+	Graphcore believes that Graph is a very natural representation of knowledge models and corresponding algorithms, 
+	so Graph is the basic representation of machine intelligence, applicable to both neural networks, 
+	Bayesian networks and Markov fields, and possible future new models and algorithms.
+
+	- [Mythic](https://www.mythic-ai.com/)
+
+	> Mythic's intelligence processing unit (IPU) adds best-in-class intelligence to any device.
+
+	Mythic claims to reduce power consumption to 1/50. The reason why they are so confident is because they use the "processing in memory" structure.
+
+	![PIM chip](./pim.png)
+
+	At each clock cycle, the pipelined ALU can either load data from memory or store data to memory, but not both
+	at the same time. Also, on each clock cycle, the MU produces three outputs that can be either selected for storage
+	(under mask control) or selected for recirculation.
+	Additionally, data can be sent to other processors via the routing network.
+	The processor can input data through a multiplexer
+	(MUX) from either the parallel prefix network, the global
+	OR network, the partitioned OR network, or the internal
+	mask/register control.
+
+2. **Image Processing Unit**:
+	
+	<div align="center">
+	<img src="ipu.jpg" width="80%" />
+	</div>
+	<br>
+
+	Some static image processing modules of SOC chips are called IPUs,
+	also ISPs(Image Signal Processor),
+	which are used to process the output signals of camera devices
+	such as cameras, and implements functions such as noise reduction, demosaicing, HDR, and color management.
 
 ## K
 
-Knowledge Processing Unit
+1. **Knowledge Processing Unit**:
+
+	Declared by [Canaan](https://canaan.io/) for its AI chip in 2017,
+	which integrating artificial neural network and high performance processor in single chip
+	to provide heterogeneous, real-time, offline artificial intelligence application services.
 
 ## M
 
-Micro Processing Unit
+1. **Micro Processing Unit**:
 
-Mind Processing Unit
+	![MPU](https://en.wikichip.org/w/images/5/53/IPO_%28input-process-output%29.svg)
 
-Mobile Processing Unit
+	A microprocessor (µP) or a Microprocessing Unit (MPU) is a device that implements the core elements of a computer system on a single integrated circuit, or as a few integrated circuits operating as a cohesive unit, designed for the processing digital data.
 
-Motion Processing Unit
+	Modern microprocessors typically incorporate the functionality of a clock, central processing unit (CPU), arithmetic logic unit (ALU), floating point unit (FPU), control unit (CU), memory management unit (MMU), interrupts, input/output interfaces, and cache. Specialized microprocessor may also serve as graphical processing units (GPUs), signal processing units (DSPs), neural processing unit (NPUs), microcontrollers, etc.
+
+2. **Mind Processing Unit**:
+	
+	An eternal tale.
+
+3. **Memory Protection Unit**:
+
+	![mem-protection](https://community.arm.com/cfs-file/__key/communityserver-blogs-components-weblogfiles/00-00-00-37-85/582Untitled.png)
+
+	The Memory Protection Unit (MPU) is a programmable unit that allows privileged software, typically an
+	OS kernel, to define memory access permission. It monitors transactions, including instruction fetches
+	and data accesses from the processor, which can trigger a fault exception when an access violation is
+	detected.
 
 ## N
 
@@ -274,3 +343,6 @@ CPU of Zylin, a Norwegian company.
 2. 知乎 [零基础看懂全球AI芯片: 详解"xPU"](https://zhuanlan.zhihu.com/p/28325678)
 3. [The biological microprocessor, or how to build a computer with biological parts](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3962179/)
 4. [Emoshape](https://emoshape.com/)
+5. [Processing in Memory: The Terasys Massively Parallel PlM Array](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=375174)
+6. [Wikichip](https://en.wikichip.org)
+7. [Memory Protection Unit (MPU)](https://static.docs.arm.com/100699/0100/armv8m_architecture_memory_protection_unit_100699_0100_00_en.pdf)
