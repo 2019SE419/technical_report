@@ -55,6 +55,47 @@ DDR的基本存储单元如下图。Cell Capacitor是一个用来存储电荷的
 
 - **CL设置**：因为CPU运行速度大大超过内存数据传输速度，因此大多数情况下CPU要向内存读取所需的原始数据时，CPU都需要等待内存提供数据，内存传输速度越慢，CPU等待时间越长，对硬件系统整体性能影响就越大，任何类型的内存，在传输数据之前，传输双方必须要进行必要的通信，这个动作会延迟数据传输，CL设置一定程度上表示了内存在CPU接到读取内存数据的指令后，到正式开始读区内存数据所需的等待时间，因此，CL设置低就具有速度优势。一般情况下，速度不同的内存混插在系统内，系统会以设置较慢的速度来运行，所以我们应选择CL设置相同的内存，避免造成资源浪费。
 
+### Memory Speed
+
+在Linux上可以查看内存的Speed。
+
+```
+# dmidecode | grep -P -A16 "Memory Device"
+Memory Device
+Array Handle: 0x0009
+Error Information Handle: Not Provided
+Total Width: 72 bits
+Data Width: 64 bits
+Size: 8192 MB
+Form Factor: DIMM
+Set: None
+Locator: DIMM02
+Bank Locator: BANK02
+Type: Other
+Type Detail: Unknown
+Speed: 1067 MHz
+Manufacturer: Micron
+Serial Number: 65ED91DC
+Asset Tag: Unknown
+Part Number: 36KSF1G72PZ-1G4M1
+......
+```
+
+上述命令可以看出每一个插槽上内存物理设备的情况，其中有两个数据比较关键：
+
+- `Speed：1067 MHz`：每秒能进行内存数据传输的速度
+- `Data Width：64 bits`：内存工作一次传输的数据宽度
+
+`Speed`和`Data Width`相乘后就是带宽。我们把历史上各个阶段的内存的Speed和带宽汇总了一下，如下图。
+
+<img src="./table1.png" alt="带宽Table" style="zoom:50%;" />
+
+通过Linux我们只看到了内存的一个Speed，它是数据传输的频率。这个频率又叫Data Speed，或等效频率。但其实从内存条的技术参数上来讲，有个最为重要的频率，是核心频率，它是内存电路的震荡频率，是内存一切工作的基石。
+
+我们来看一下各代内存的更全面详细的数据。
+
+![Table-2](./table2.png)
+
 ### Development
 
 内存产品与计算机和手机一起，经历了几次更新换代，容量从64MB升级到了今天的16GB，速率从133MHz升级到了今天的2133MHz，单位功耗降低了80%以上。主要产品包括以下几种：
@@ -122,4 +163,3 @@ I865PE芯片组完全解决了内存带宽的瓶颈，凭借双通道DDR技术�
 Sandy Bridge(SNB), Ivy Bridge(IVB), Haswell(HSW), and Broadwell(BDW)。
 
 ![ref-paper](./ref.png)
-
