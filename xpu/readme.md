@@ -31,7 +31,7 @@ xPU is a certain processor for certain usage in fact.
 	Aimed for IoT rather than robot, meaning brains of artifact intelligence.
 
 <div align="center">
-<img src="bpu.jpg" width="80%" />
+<img src="BPU.jpg" width="80%" />
 </div>
 <br>
 
@@ -85,7 +85,7 @@ xPU is a certain processor for certain usage in fact.
 	Each DPU includes 16 DPE(Deep-Learning Processing Element)s, so that there are totally 128 elements working for SIMD instructions.
 
 <div align="center">
-<img src="dlu.jpg" width="80%" />
+<img src="DLU.jpg" width="80%" />
 </div>
 <br>
 
